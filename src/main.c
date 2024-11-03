@@ -60,7 +60,7 @@ int main() {
     csmiDebugPrintArg(INFO, "%d TEMP!\n", CINFO, data.size);
     void* buff = allocateAligned(data.size, 64);
     memcpy(data.data, buff, data.size);
-    csmHasMocConsistency(buff, 0);
+    csmHasMocConsistency(buff, data.size + 64 - (data.size % 64));
 
     return 0;
 }
