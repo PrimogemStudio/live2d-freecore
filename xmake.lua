@@ -1,0 +1,15 @@
+add_rules("mode.debug")
+add_rules("mode.release")
+add_rules("mode.releasedbg")
+
+target("live2d-freecore")
+    set_kind("shared")
+    add_files("src/**.c")
+    add_headerfiles("src/**.h")
+    add_sysincludedirs("include")
+
+target("live2d-freecore-test")
+    set_kind("binary")
+    add_files("src/**.c")
+    add_headerfiles("src/**.h")
+    add_sysincludedirs("include")
