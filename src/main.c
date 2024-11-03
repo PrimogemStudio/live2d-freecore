@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "DebugUtils.h"
 
 struct FileData {
     char* data;
@@ -26,7 +27,8 @@ FileData readFile(const char* path) {
 int main() {
     const char* path = "/home/coder2/extsources/LpkUnpacker/Test/character/FileReferences_Moc_0.moc3";
     FileData data = readFile(path);
-    for (int d = 0; d < data.size; d++) printf("%c\n", data.data[d]);
-
+    
+    // for (int d = 0; d < data.size; d++) printf("%c\n", data.data[d]);
+    csmiDebugPrintArg(INFO, "%d TEMP!\n", CINFO, data.size);
     return 0;
 }

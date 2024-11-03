@@ -9,3 +9,8 @@ csmApi csmMocVersion csmCallingConvention csmGetLatestMocVersion()
 {
     return csmMocVersion_50;
 }
+
+csmApi int csmCallingConvention csmHasMocConsistency(void* address, const unsigned int size)
+{
+    return 1;
+}
